@@ -1,0 +1,126 @@
+import Link from "next/link";
+
+export default function AboutPage() {
+  return (
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 className="text-3xl font-bold text-hdfc-navy mb-6">
+        What is a Specialized Investment Fund?
+      </h1>
+
+      <div className="prose max-w-none">
+        {/* Intro */}
+        <div className="bg-hdfc-gray-50 rounded-xl p-6 mb-8">
+          <p className="text-hdfc-gray-600 leading-relaxed text-base">
+            Specialized Investment Funds (SIFs) are a new category of
+            SEBI-regulated investment vehicles introduced in 2025. They bridge
+            the gap between traditional mutual funds and more complex products
+            like Portfolio Management Services (PMS) and Alternative Investment
+            Funds (AIFs) — offering sophisticated strategies with mutual fund
+            tax benefits.
+          </p>
+        </div>
+
+        {/* Key sections */}
+        <div className="space-y-8">
+          <section>
+            <h2 className="text-xl font-bold text-hdfc-navy mb-3">
+              The SIF Advantage
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                {
+                  title: "Long-Short Capability",
+                  desc: "Unlike mutual funds, SIFs can take unhedged short positions (up to 25% of NAV). This allows fund managers to profit from overvalued stocks while maintaining long positions in fundamentally strong ones.",
+                },
+                {
+                  title: "Tax Efficiency",
+                  desc: "SIFs enjoy the same tax treatment as mutual funds — 12.5% LTCG on equity-oriented strategies (beyond ₹1.25L exemption) and 20% STCG. This is significantly more favorable than PMS taxation.",
+                },
+                {
+                  title: "SEBI Oversight",
+                  desc: "Governed under SEBI Mutual Fund regulations with daily NAV disclosure, regulated expense ratios, and institutional-grade compliance — offering more transparency than PMS or AIFs.",
+                },
+                {
+                  title: "Absolute Return Focus",
+                  desc: "Long-short strategies aim for consistent absolute returns regardless of market direction — a capability previously only available through PMS and AIFs at much higher minimum investments.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-white border border-hdfc-gray-200 rounded-xl p-5"
+                >
+                  <h3 className="font-bold text-hdfc-navy mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-hdfc-gray-500 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-hdfc-navy mb-3">
+              Who Should Invest?
+            </h2>
+            <div className="bg-white border border-hdfc-gray-200 rounded-xl p-6">
+              <ul className="space-y-3">
+                {[
+                  "Investors with ₹10 lakh+ to deploy in a single AMC's SIF strategies",
+                  "Those seeking advanced strategies like long-short equity without the ₹50L PMS threshold",
+                  "HNIs looking for tax-efficient alternatives to PMS and AIFs",
+                  "Experienced investors comfortable with derivative-based strategies and their associated risks",
+                  "Investors seeking absolute returns with lower correlation to broad market indices",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-5 h-5 rounded-full bg-hdfc-red text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                      ✓
+                    </span>
+                    <span className="text-sm text-hdfc-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-hdfc-navy mb-3">
+              About HDFC SIF
+            </h2>
+            <div className="bg-hdfc-gray-50 rounded-xl p-6">
+              <p className="text-sm text-hdfc-gray-600 leading-relaxed mb-3">
+                HDFC Asset Management Company — India's largest mutual fund by
+                AUM — brings its decades of fund management expertise to the SIF
+                space. HDFC SIF strategies are managed by the same experienced
+                teams that run HDFC Mutual Fund's flagship schemes.
+              </p>
+              <p className="text-sm text-hdfc-gray-600 leading-relaxed">
+                With a distinct brand identity as mandated by SEBI, HDFC SIF
+                operates as a dedicated vertical within HDFC AMC, led by a Chief
+                Investment Officer with 10+ years of fund management experience
+                and ₹5,000+ crore AUM track record.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-10 flex flex-wrap gap-4">
+          <Link
+            href="/strategies"
+            className="px-8 py-3 bg-hdfc-red text-white font-semibold rounded-lg hover:bg-hdfc-red-dark transition-colors"
+          >
+            View Strategies
+          </Link>
+          <Link
+            href="/compare"
+            className="px-8 py-3 border border-hdfc-gray-300 text-hdfc-gray-600 font-semibold rounded-lg hover:bg-hdfc-gray-50 transition-colors"
+          >
+            Compare SIF vs MF vs PMS
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
