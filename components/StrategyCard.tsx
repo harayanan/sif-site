@@ -5,7 +5,7 @@ const riskColors: Record<string, string> = {
   Moderate: "text-brand-gold",
   "Moderately High": "text-amber-400",
   High: "text-orange-400",
-  "Very High": "text-red-400",
+  "Very High": "text-brand-red",
 };
 
 const categoryLabels: Record<string, string> = {
@@ -16,9 +16,9 @@ const categoryLabels: Record<string, string> = {
 
 export default function StrategyCard({ strategy }: { strategy: Strategy }) {
   return (
-    <div className="group relative bg-brand-navy-light border border-gold-subtle rounded-xl overflow-hidden hover:border-brand-gold/40 transition-all duration-300 glow-gold hover:glow-gold">
-      {/* Subtle top accent */}
-      <div className="h-[1px] bg-gold-gradient" />
+    <div className="group relative bg-brand-navy-light border border-blue-subtle rounded-xl overflow-hidden hover:border-brand-blue-light/40 transition-all duration-300">
+      {/* Top accent line */}
+      <div className="h-[2px] bg-gradient-to-r from-brand-blue via-brand-red to-brand-gold" />
 
       <div className="p-6">
         {/* Top badges */}
@@ -27,7 +27,7 @@ export default function StrategyCard({ strategy }: { strategy: Strategy }) {
             {categoryLabels[strategy.category]}
           </span>
           {strategy.status === "live" ? (
-            <span className="px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span className="px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full bg-brand-red/10 text-brand-red border border-brand-red/20">
               Live
             </span>
           ) : (
@@ -47,7 +47,7 @@ export default function StrategyCard({ strategy }: { strategy: Strategy }) {
 
         {/* Key stats */}
         <div className="grid grid-cols-2 gap-3 mb-5">
-          <div className="bg-brand-navy/60 rounded-lg p-3 border border-gold-subtle">
+          <div className="bg-brand-navy/60 rounded-lg p-3 border border-blue-subtle">
             <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">
               Min. Investment
             </p>
@@ -55,7 +55,7 @@ export default function StrategyCard({ strategy }: { strategy: Strategy }) {
               {strategy.minInvestment}
             </p>
           </div>
-          <div className="bg-brand-navy/60 rounded-lg p-3 border border-gold-subtle">
+          <div className="bg-brand-navy/60 rounded-lg p-3 border border-blue-subtle">
             <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">
               Max Short
             </p>
@@ -70,9 +70,7 @@ export default function StrategyCard({ strategy }: { strategy: Strategy }) {
           <span className="text-[10px] text-gray-500 uppercase tracking-wider">
             Risk Level
           </span>
-          <span
-            className={`text-xs font-semibold ${riskColors[strategy.riskLevel]}`}
-          >
+          <span className={`text-xs font-semibold ${riskColors[strategy.riskLevel]}`}>
             {strategy.riskLevel}
           </span>
         </div>
@@ -80,7 +78,7 @@ export default function StrategyCard({ strategy }: { strategy: Strategy }) {
         {/* CTA */}
         <Link
           href={`/strategies/${strategy.slug}`}
-          className="block w-full text-center px-4 py-3 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 bg-gold-gradient text-brand-navy hover:opacity-90"
+          className="block w-full text-center px-4 py-3 rounded-lg text-sm font-semibold tracking-wide transition-all duration-300 bg-brand-red text-white hover:bg-brand-red-dark"
         >
           {strategy.status === "live" ? "View Strategy" : "Notify Me"}
         </Link>

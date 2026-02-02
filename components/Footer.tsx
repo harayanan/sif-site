@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-charcoal border-t border-gold-subtle">
+    <footer className="bg-brand-charcoal border-t border-blue-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 bg-gold-gradient rounded flex items-center justify-center">
-                <span className="text-brand-navy font-bold text-xs">X</span>
+              <div className="w-7 h-7 bg-brand-red rounded flex items-center justify-center">
+                <span className="text-white font-bold text-xs">X</span>
               </div>
               <span className="font-display font-bold text-lg tracking-wide">
                 <span className="text-brand-gold">XYZ</span>{" "}
@@ -52,13 +52,7 @@ export default function Footer() {
               Resources
             </h4>
             <ul className="space-y-3">
-              {[
-                "NAVs",
-                "Factsheets",
-                "Strategy Documents",
-                "Tax Reckoner",
-                "Forms & Downloads",
-              ].map((item) => (
+              {["NAVs", "Factsheets", "Strategy Documents", "Tax Reckoner", "Forms & Downloads"].map((item) => (
                 <li key={item}>
                   <span className="text-sm text-gray-500 hover:text-brand-gold transition-colors cursor-pointer font-light">
                     {item}
@@ -85,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gold-subtle">
+        <div className="mt-12 pt-8 border-t border-blue-subtle">
           <p className="text-xs text-gray-600 leading-relaxed font-light">
             Mutual Fund investments are subject to market risks, read all scheme
             related documents carefully. SIF strategies involve use of

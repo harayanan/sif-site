@@ -28,7 +28,7 @@ export default function StrategiesPage() {
 
       {sections.map((section) => (
         <div key={section.label} className="mb-14">
-          <h2 className="text-lg font-semibold text-white mb-6 border-l-2 border-brand-gold pl-4 tracking-wide">
+          <h2 className="text-lg font-semibold text-white mb-6 border-l-2 border-brand-red pl-4 tracking-wide">
             {section.label}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

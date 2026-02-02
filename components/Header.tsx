@@ -15,13 +15,13 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-brand-navy/95 backdrop-blur-md border-b border-gold-subtle sticky top-0 z-50">
+    <header className="bg-brand-navy/95 backdrop-blur-md border-b border-blue-subtle sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gold-gradient rounded flex items-center justify-center">
-              <span className="text-brand-navy font-bold text-sm">X</span>
+            <div className="w-8 h-8 bg-brand-red rounded flex items-center justify-center">
+              <span className="text-white font-bold text-sm">X</span>
             </div>
             <div className="leading-tight">
               <span className="text-brand-gold font-display font-bold text-lg tracking-wide">
@@ -50,7 +50,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/strategies"
-              className="hidden sm:inline-flex px-6 py-2 bg-gold-gradient text-brand-navy text-sm font-semibold rounded tracking-wide hover:opacity-90 transition-opacity"
+              className="hidden sm:inline-flex px-6 py-2 bg-brand-red text-white text-sm font-semibold rounded tracking-wide hover:bg-brand-red-dark transition-colors"
             >
               Invest Now
             </Link>
@@ -72,7 +72,7 @@ export default function Header() {
 
         {/* Mobile Nav */}
         {menuOpen && (
-          <nav className="md:hidden py-4 border-t border-gold-subtle">
+          <nav className="md:hidden py-4 border-t border-blue-subtle">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -86,7 +86,7 @@ export default function Header() {
             <Link
               href="/strategies"
               onClick={() => setMenuOpen(false)}
-              className="block mt-2 mx-4 px-5 py-2.5 bg-gold-gradient text-brand-navy text-sm font-semibold rounded text-center"
+              className="block mt-2 mx-4 px-5 py-2.5 bg-brand-red text-white text-sm font-semibold rounded text-center hover:bg-brand-red-dark"
             >
               Invest Now
             </Link>

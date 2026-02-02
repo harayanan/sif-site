@@ -21,9 +21,12 @@
     background-clip: text;
   }
   .border-gold-subtle {
-    border-color: rgba(201, 169, 110, 0.2);
+    border-color: rgba(201, 169, 110, 0.15);
+  }
+  .border-blue-subtle {
+    border-color: rgba(0, 75, 135, 0.3);
   }
   .glow-gold {
-    box-shadow: 0 0 40px rgba(201, 169, 110, 0.08);
+    box-shadow: 0 0 40px rgba(201, 169, 110, 0.06);
   }
 }

@@ -9,19 +9,17 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Background layers */}
         <div className="absolute inset-0 bg-dark-gradient" />
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-brand-gold/[0.03] blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-gold/[0.02] blur-3xl" />
+          <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] rounded-full bg-brand-blue/10 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-brand-red/[0.04] blur-3xl" />
         </div>
-        {/* Fine grid pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(201,169,110,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,110,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(0,75,135,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(0,75,135,0.4) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 border border-brand-gold/20 rounded-full text-sm text-brand-gold-light font-light tracking-wide mb-8">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+            <div className="inline-flex items-center gap-2.5 px-5 py-2 border border-brand-red/30 rounded-full text-sm text-brand-red font-medium tracking-wide mb-8">
+              <span className="w-1.5 h-1.5 bg-brand-red rounded-full animate-pulse" />
               Now accepting investments
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
@@ -37,7 +35,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/strategies"
-                className="px-8 py-3.5 bg-gold-gradient text-brand-navy font-semibold rounded-lg hover:opacity-90 transition-opacity text-base tracking-wide"
+                className="px-8 py-3.5 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red-dark transition-colors text-base tracking-wide"
               >
                 Explore Strategies
               </Link>
@@ -51,8 +49,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom fade line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-brand-blue/30 to-transparent" />
       </section>
 
       {/* Value Props */}
@@ -79,9 +76,9 @@ export default function Home() {
             ].map((item, i) => (
               <div
                 key={item.title}
-                className="relative bg-brand-navy border border-gold-subtle rounded-xl p-6 hover:border-brand-gold/30 transition-all duration-300"
+                className="relative bg-brand-navy border border-blue-subtle rounded-xl p-6 hover:border-brand-blue-light/30 transition-all duration-300"
               >
-                <div className="text-brand-gold text-2xl font-display font-bold mb-3 opacity-30">
+                <div className="text-brand-red text-2xl font-display font-bold mb-3 opacity-50">
                   0{i + 1}
                 </div>
                 <h3 className="font-semibold text-white mb-2 text-sm tracking-wide">
@@ -110,7 +107,7 @@ export default function Home() {
             </div>
             <Link
               href="/strategies"
-              className="hidden sm:inline-flex text-sm font-medium text-brand-gold hover:text-brand-gold-light transition-colors tracking-wide"
+              className="hidden sm:inline-flex text-sm font-medium text-brand-red hover:text-brand-red-dark transition-colors tracking-wide"
             >
               View all →
             </Link>
@@ -124,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="py-20 bg-brand-navy-light border-t border-b border-gold-subtle">
+      <section className="py-20 bg-brand-navy-light border-t border-b border-blue-subtle">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-2">
@@ -153,7 +150,7 @@ export default function Home() {
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-gold-gradient text-brand-navy text-xl font-bold flex items-center justify-center mx-auto mb-5">
+                <div className="w-16 h-16 rounded-full bg-brand-red text-white text-xl font-bold flex items-center justify-center mx-auto mb-5">
                   {item.step}
                 </div>
                 <h3 className="font-semibold text-white text-lg mb-2">
@@ -171,8 +168,8 @@ export default function Home() {
       {/* CTA Banner */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative bg-brand-navy-light border border-gold-subtle rounded-2xl p-10 sm:p-14 text-center overflow-hidden">
-            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(201,169,110,0.5) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+          <div className="relative bg-brand-navy-light border border-blue-subtle rounded-2xl p-10 sm:p-14 text-center overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(0,75,135,0.5) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
             <div className="relative">
               <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-3">
                 Ready to go beyond traditional investments?
@@ -184,7 +181,7 @@ export default function Home() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/strategies"
-                  className="px-8 py-3.5 bg-gold-gradient text-brand-navy font-semibold rounded-lg hover:opacity-90 transition-opacity tracking-wide"
+                  className="px-8 py-3.5 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red-dark transition-colors tracking-wide"
                 >
                   Explore Strategies
                 </Link>

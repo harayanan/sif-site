@@ -10,7 +10,7 @@ const riskColors: Record<string, string> = {
   Moderate: "text-brand-gold border-brand-gold/30",
   "Moderately High": "text-amber-400 border-amber-400/30",
   High: "text-orange-400 border-orange-400/30",
-  "Very High": "text-red-400 border-red-400/30",
+  "Very High": "text-brand-red border-brand-red/30",
 };
 
 export default function StrategyDetail({
@@ -38,13 +38,11 @@ export default function StrategyDetail({
           <span className="px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full border border-brand-gold/30 text-brand-gold">
             {strategy.category}
           </span>
-          <span
-            className={`px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full border ${riskColors[strategy.riskLevel]}`}
-          >
+          <span className={`px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full border ${riskColors[strategy.riskLevel]}`}>
             {strategy.riskLevel} Risk
           </span>
           {strategy.status === "live" ? (
-            <span className="px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span className="px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] rounded-full bg-brand-red/10 text-brand-red border border-brand-red/20">
               Live
             </span>
           ) : (
@@ -60,7 +58,7 @@ export default function StrategyDetail({
       </div>
 
       {/* Description */}
-      <div className="bg-brand-navy-light border border-gold-subtle rounded-xl p-6 mb-8">
+      <div className="bg-brand-navy-light border border-blue-subtle rounded-xl p-6 mb-8">
         <h2 className="font-semibold text-white mb-2 tracking-wide text-sm uppercase">
           Strategy Overview
         </h2>
@@ -77,13 +75,8 @@ export default function StrategyDetail({
           { label: "Benchmark", value: strategy.benchmark },
           { label: "Risk Level", value: strategy.riskLevel },
         ].map((stat) => (
-          <div
-            key={stat.label}
-            className="bg-brand-navy-light border border-gold-subtle rounded-xl p-4"
-          >
-            <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">
-              {stat.label}
-            </p>
+          <div key={stat.label} className="bg-brand-navy-light border border-blue-subtle rounded-xl p-4">
+            <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">{stat.label}</p>
             <p className="font-semibold text-white text-sm">{stat.value}</p>
           </div>
         ))}
@@ -94,30 +87,19 @@ export default function StrategyDetail({
         <h2 className="text-sm font-semibold text-brand-gold uppercase tracking-[0.15em] mb-4">
           Asset Allocation
         </h2>
-        <div className="bg-brand-navy-light border border-gold-subtle rounded-xl overflow-hidden">
+        <div className="bg-brand-navy-light border border-blue-subtle rounded-xl overflow-hidden">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gold-subtle">
-                <th className="text-left px-6 py-3.5 font-semibold text-gray-400 text-xs uppercase tracking-wider">
-                  Asset Class
-                </th>
-                <th className="text-right px-6 py-3.5 font-semibold text-gray-400 text-xs uppercase tracking-wider">
-                  Range
-                </th>
+              <tr className="border-b border-blue-subtle">
+                <th className="text-left px-6 py-3.5 font-semibold text-gray-400 text-xs uppercase tracking-wider">Asset Class</th>
+                <th className="text-right px-6 py-3.5 font-semibold text-gray-400 text-xs uppercase tracking-wider">Range</th>
               </tr>
             </thead>
             <tbody>
               {strategy.assetAllocation.map((row, i) => (
-                <tr
-                  key={i}
-                  className="border-b border-gold-subtle last:border-0"
-                >
-                  <td className="px-6 py-3.5 text-gray-300 font-light">
-                    {row.label}
-                  </td>
-                  <td className="px-6 py-3.5 text-right font-semibold text-white">
-                    {row.range}
-                  </td>
+                <tr key={i} className="border-b border-blue-subtle last:border-0">
+                  <td className="px-6 py-3.5 text-gray-300 font-light">{row.label}</td>
+                  <td className="px-6 py-3.5 text-right font-semibold text-white">{row.range}</td>
                 </tr>
               ))}
             </tbody>
@@ -132,11 +114,8 @@ export default function StrategyDetail({
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {strategy.keyFeatures.map((feature, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-3 bg-brand-navy-light border border-gold-subtle rounded-lg p-4"
-            >
-              <span className="w-5 h-5 rounded-full bg-gold-gradient text-brand-navy text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">
+            <div key={i} className="flex items-start gap-3 bg-brand-navy-light border border-blue-subtle rounded-lg p-4">
+              <span className="w-5 h-5 rounded-full bg-brand-red text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">
                 ✓
               </span>
               <span className="text-sm text-gray-300 font-light">{feature}</span>
@@ -148,11 +127,11 @@ export default function StrategyDetail({
       {/* CTA */}
       <div className="flex flex-wrap gap-4">
         {strategy.status === "live" ? (
-          <button className="px-8 py-3.5 bg-gold-gradient text-brand-navy font-semibold rounded-lg hover:opacity-90 transition-opacity tracking-wide">
+          <button className="px-8 py-3.5 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red-dark transition-colors tracking-wide">
             Invest Now
           </button>
         ) : (
-          <button className="px-8 py-3.5 bg-gold-gradient text-brand-navy font-semibold rounded-lg hover:opacity-90 transition-opacity tracking-wide">
+          <button className="px-8 py-3.5 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red-dark transition-colors tracking-wide">
             Notify Me When Live
           </button>
         )}

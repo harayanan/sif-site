@@ -26,8 +26,8 @@ export default function FAQsPage() {
               key={i}
               className={`border rounded-xl overflow-hidden transition-colors ${
                 isOpen
-                  ? "border-brand-gold/30 bg-brand-navy-light"
-                  : "border-gold-subtle hover:border-brand-gold/20"
+                  ? "border-brand-red/30 bg-brand-navy-light"
+                  : "border-blue-subtle hover:border-brand-blue-light/30"
               }`}
             >
               <button
@@ -38,19 +38,14 @@ export default function FAQsPage() {
                   {faq.q}
                 </span>
                 <svg
-                  className={`w-4 h-4 text-brand-gold flex-shrink-0 transition-transform duration-200 ${
+                  className={`w-4 h-4 text-brand-red flex-shrink-0 transition-transform duration-200 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M19 9l-7 7-7-7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               {isOpen && (

@@ -10,8 +10,7 @@ export default function AboutPage() {
         What is a Specialized Investment Fund?
       </h1>
 
-      {/* Intro */}
-      <div className="bg-brand-navy-light border border-gold-subtle rounded-xl p-7 mb-10">
+      <div className="bg-brand-navy-light border border-blue-subtle rounded-xl p-7 mb-10">
         <p className="text-gray-400 leading-relaxed font-light text-base">
           Specialized Investment Funds (SIFs) are a new category of
           SEBI-regulated investment vehicles introduced in 2025. They bridge
@@ -22,7 +21,6 @@ export default function AboutPage() {
         </p>
       </div>
 
-      {/* Advantages */}
       <div className="space-y-10">
         <section>
           <h2 className="text-sm font-semibold text-brand-gold uppercase tracking-[0.2em] mb-5">
@@ -47,10 +45,7 @@ export default function AboutPage() {
                 desc: "Long-short strategies aim for consistent absolute returns regardless of market direction — a capability previously only available through PMS and AIFs at much higher minimum investments.",
               },
             ].map((item) => (
-              <div
-                key={item.title}
-                className="bg-brand-navy-light border border-gold-subtle rounded-xl p-6 hover:border-brand-gold/30 transition-colors"
-              >
+              <div key={item.title} className="bg-brand-navy-light border border-blue-subtle rounded-xl p-6 hover:border-brand-blue-light/30 transition-colors">
                 <h3 className="font-semibold text-white mb-2 text-sm tracking-wide">
                   {item.title}
                 </h3>
@@ -66,7 +61,7 @@ export default function AboutPage() {
           <h2 className="text-sm font-semibold text-brand-gold uppercase tracking-[0.2em] mb-5">
             Who Should Invest?
           </h2>
-          <div className="bg-brand-navy-light border border-gold-subtle rounded-xl p-6">
+          <div className="bg-brand-navy-light border border-blue-subtle rounded-xl p-6">
             <ul className="space-y-4">
               {[
                 "Investors with ₹10 lakh+ to deploy in a single AMC's SIF strategies",
@@ -76,7 +71,7 @@ export default function AboutPage() {
                 "Investors seeking absolute returns with lower correlation to broad market indices",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <span className="w-5 h-5 rounded-full bg-gold-gradient text-brand-navy text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">
+                  <span className="w-5 h-5 rounded-full bg-brand-red text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">
                     ✓
                   </span>
                   <span className="text-sm text-gray-400 font-light">{item}</span>
@@ -90,7 +85,7 @@ export default function AboutPage() {
           <h2 className="text-sm font-semibold text-brand-gold uppercase tracking-[0.2em] mb-5">
             About XYZ SIF
           </h2>
-          <div className="bg-brand-navy-light border border-gold-subtle rounded-xl p-6">
+          <div className="bg-brand-navy-light border border-blue-subtle rounded-xl p-6">
             <p className="text-sm text-gray-400 leading-relaxed font-light mb-3">
               XYZ Asset Management Company — India's largest mutual fund by
               AUM — brings its decades of fund management expertise to the SIF
@@ -107,11 +102,10 @@ export default function AboutPage() {
         </section>
       </div>
 
-      {/* CTA */}
       <div className="mt-12 flex flex-wrap gap-4">
         <Link
           href="/strategies"
-          className="px-8 py-3.5 bg-gold-gradient text-brand-navy font-semibold rounded-lg hover:opacity-90 transition-opacity tracking-wide"
+          className="px-8 py-3.5 bg-brand-red text-white font-semibold rounded-lg hover:bg-brand-red-dark transition-colors tracking-wide"
         >
           View Strategies
         </Link>
