@@ -29,21 +29,8 @@
   .bg-gold-gradient {
     background: linear-gradient(135deg, #C9A96E 0%, #E2CFA5 50%, #C9A96E 100%);
   }
-  .border-gold-subtle {
-    border-color: rgba(201, 169, 110, 0.25);
-  }
-  .bg-cream-pattern {
-    background-color: #F8F3EB;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A96E' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-  .gold-diamond {
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(135deg, #C9A96E, #E2CFA5);
-    transform: rotate(45deg);
-  }
-  .gold-line-accent {
+  .gold-line {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #C9A96E, transparent);
+    background: linear-gradient(90deg, transparent, rgba(201,169,110,0.25), transparent);
   }
 }

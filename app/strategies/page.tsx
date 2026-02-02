@@ -13,13 +13,13 @@ export default function StrategiesPage() {
   ].filter((s) => s.items.length > 0);
 
   return (
-    <div className="bg-cream-pattern min-h-screen py-14">
+    <div className="bg-brand-navy min-h-screen py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <h1 className="font-serif text-3xl sm:text-4xl text-brand-navy mb-3">
-            Our <em className="italic text-brand-red">Specialized</em> Fund Categories
+          <h1 className="font-serif text-3xl sm:text-4xl text-white mb-3">
+            Our <em className="italic text-brand-gold">Specialized</em> Fund Categories
           </h1>
-          <p className="text-gray-500 font-light max-w-lg mx-auto">
+          <p className="text-gray-400 font-light max-w-lg mx-auto">
             Choose from equity, debt, and hybrid long-short strategies governed
             by detailed Investment Strategy Information Documents.
           </p>
@@ -30,9 +30,7 @@ export default function StrategiesPage() {
           <div key={section.label} className="mb-14">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-2 h-2 bg-brand-red rotate-45" />
-              <h2 className="font-serif text-xl text-brand-navy">
-                {section.label}
-              </h2>
+              <h2 className="font-serif text-xl text-white">{section.label}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {section.items.map((s) => (
