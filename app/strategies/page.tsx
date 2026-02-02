@@ -13,19 +13,22 @@ export default function StrategiesPage() {
   ].filter((s) => s.items.length > 0);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold text-hdfc-navy mb-2">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-2">
+        Investment Strategies
+      </p>
+      <h1 className="text-3xl font-display font-bold text-white mb-2">
         SIF Strategies
       </h1>
-      <p className="text-hdfc-gray-500 mb-10 max-w-2xl">
+      <p className="text-gray-500 mb-12 max-w-2xl font-light">
         Choose from equity, debt, and hybrid long-short strategies. Each
         strategy is governed by a detailed Investment Strategy Information
         Document (ISID).
       </p>
 
       {sections.map((section) => (
-        <div key={section.label} className="mb-12">
-          <h2 className="text-xl font-bold text-hdfc-navy mb-5 border-l-4 border-hdfc-red pl-4">
+        <div key={section.label} className="mb-14">
+          <h2 className="text-lg font-semibold text-white mb-6 border-l-2 border-brand-gold pl-4 tracking-wide">
             {section.label}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

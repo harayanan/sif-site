@@ -4,9 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "HDFC SIF — Specialized Investment Funds",
+  title: "XYZ SIF — Specialized Investment Funds",
   description:
-    "Specialized Investment Funds by HDFC Mutual Fund. Advanced long-short strategies bridging mutual funds and PMS.",
+    "Specialized Investment Funds by XYZ Mutual Fund. Advanced long-short strategies for sophisticated investors.",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-hdfc-gray-800 font-sans antialiased">
+      <body className="bg-brand-navy text-gray-100 font-sans antialiased">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

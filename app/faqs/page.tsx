@@ -7,12 +7,15 @@ export default function FAQsPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <h1 className="text-3xl font-bold text-hdfc-navy mb-2">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <p className="text-brand-gold text-xs font-semibold uppercase tracking-[0.2em] mb-2">
+        Support
+      </p>
+      <h1 className="text-3xl font-display font-bold text-white mb-2">
         Frequently Asked Questions
       </h1>
-      <p className="text-hdfc-gray-500 mb-10">
-        Everything you need to know about HDFC Specialized Investment Funds.
+      <p className="text-gray-500 mb-10 font-light">
+        Everything you need to know about XYZ Specialized Investment Funds.
       </p>
 
       <div className="space-y-3">
@@ -21,17 +24,21 @@ export default function FAQsPage() {
           return (
             <div
               key={i}
-              className="border border-hdfc-gray-200 rounded-xl overflow-hidden"
+              className={`border rounded-xl overflow-hidden transition-colors ${
+                isOpen
+                  ? "border-brand-gold/30 bg-brand-navy-light"
+                  : "border-gold-subtle hover:border-brand-gold/20"
+              }`}
             >
               <button
                 onClick={() => setOpenIndex(isOpen ? null : i)}
-                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-hdfc-gray-50 transition-colors"
+                className="w-full flex items-center justify-between px-6 py-5 text-left"
               >
-                <span className="font-semibold text-hdfc-navy text-sm pr-4">
+                <span className="font-medium text-white text-sm pr-4 tracking-wide">
                   {faq.q}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-hdfc-gray-400 flex-shrink-0 transition-transform ${
+                  className={`w-4 h-4 text-brand-gold flex-shrink-0 transition-transform duration-200 ${
                     isOpen ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -41,14 +48,14 @@ export default function FAQsPage() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
+                    strokeWidth={1.5}
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
               </button>
               {isOpen && (
                 <div className="px-6 pb-5">
-                  <p className="text-sm text-hdfc-gray-600 leading-relaxed">
+                  <p className="text-sm text-gray-400 leading-relaxed font-light">
                     {faq.a}
                   </p>
                 </div>

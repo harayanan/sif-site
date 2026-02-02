@@ -2,31 +2,32 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-hdfc-navy text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-brand-charcoal border-t border-gold-subtle">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 bg-hdfc-red rounded flex items-center justify-center">
-                <span className="text-white font-bold text-xs">H</span>
+              <div className="w-7 h-7 bg-gold-gradient rounded flex items-center justify-center">
+                <span className="text-brand-navy font-bold text-xs">X</span>
               </div>
-              <span className="font-bold text-lg">
-                HDFC <span className="text-hdfc-red">SIF</span>
+              <span className="font-display font-bold text-lg tracking-wide">
+                <span className="text-brand-gold">XYZ</span>{" "}
+                <span className="text-gray-500 font-light">SIF</span>
               </span>
             </div>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              Specialized Investment Funds by HDFC Mutual Fund. Bridging the gap
-              between mutual funds and PMS/AIFs.
+            <p className="text-sm text-gray-500 leading-relaxed font-light">
+              Specialized Investment Funds by XYZ Mutual Fund. Sophisticated
+              strategies for discerning investors.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-sm mb-4 text-gray-300 uppercase tracking-wider">
-              Quick Links
+            <h4 className="font-semibold text-xs mb-5 text-brand-gold uppercase tracking-[0.2em]">
+              Navigate
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {[
                 ["/strategies", "SIF Strategies"],
                 ["/compare", "SIF vs Others"],
@@ -36,7 +37,7 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-gray-500 hover:text-brand-gold transition-colors font-light"
                   >
                     {label}
                   </Link>
@@ -47,10 +48,10 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold text-sm mb-4 text-gray-300 uppercase tracking-wider">
+            <h4 className="font-semibold text-xs mb-5 text-brand-gold uppercase tracking-[0.2em]">
               Resources
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {[
                 "NAVs",
                 "Factsheets",
@@ -59,7 +60,7 @@ export default function Footer() {
                 "Forms & Downloads",
               ].map((item) => (
                 <li key={item}>
-                  <span className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer">
+                  <span className="text-sm text-gray-500 hover:text-brand-gold transition-colors cursor-pointer font-light">
                     {item}
                   </span>
                 </li>
@@ -69,16 +70,14 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-sm mb-4 text-gray-300 uppercase tracking-wider">
-              Contact Us
+            <h4 className="font-semibold text-xs mb-5 text-brand-gold uppercase tracking-[0.2em]">
+              Contact
             </h4>
-            <div className="space-y-2.5 text-sm text-gray-400">
+            <div className="space-y-3 text-sm text-gray-500 font-light">
               <p>1800 3010 6767 (Toll Free)</p>
-              <p>sif@hdfcfund.com</p>
+              <p>sif@xyzfund.com</p>
               <p className="leading-relaxed">
-                HDFC AMC Ltd, HDFC House,
-                <br />
-                2nd Floor, H.T. Parekh Marg,
+                XYZ AMC Ltd,
                 <br />
                 Mumbai — 400 020
               </p>
@@ -86,16 +85,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-8 border-t border-gray-700">
-          <p className="text-xs text-gray-500 leading-relaxed">
+        <div className="mt-12 pt-8 border-t border-gold-subtle">
+          <p className="text-xs text-gray-600 leading-relaxed font-light">
             Mutual Fund investments are subject to market risks, read all scheme
-            related documents carefully. HDFC SIF strategies involve use of
+            related documents carefully. SIF strategies involve use of
             derivatives which carry additional risks. Past performance is not
             indicative of future results. Minimum investment of ₹10 lakh
             applicable per PAN per AMC.
           </p>
-          <p className="text-xs text-gray-600 mt-4">
-            &copy; {new Date().getFullYear()} HDFC Asset Management Company Ltd.
+          <p className="text-xs text-gray-700 mt-4 font-light">
+            &copy; {new Date().getFullYear()} XYZ Asset Management Company Ltd.
             All rights reserved.
           </p>
         </div>

@@ -16,7 +16,7 @@ export interface Strategy {
 export const strategies: Strategy[] = [
   {
     slug: "equity-ex-top-100-long-short",
-    name: "HDFC SIF Equity Ex-Top 100 Long Short Fund",
+    name: "XYZ SIF Equity Ex-Top 100 Long Short Fund",
     category: "equity",
     status: "live",
     tagline: "Mid & small-cap alpha with downside protection",
@@ -40,7 +40,7 @@ export const strategies: Strategy[] = [
   },
   {
     slug: "hybrid-long-short",
-    name: "HDFC SIF Hybrid Long Short Fund",
+    name: "XYZ SIF Hybrid Long Short Fund",
     category: "hybrid",
     status: "live",
     tagline: "Balanced returns with lower volatility",
@@ -64,7 +64,7 @@ export const strategies: Strategy[] = [
   },
   {
     slug: "sector-rotation-long-short",
-    name: "HDFC SIF Sector Rotation Long Short Fund",
+    name: "XYZ SIF Sector Rotation Long Short Fund",
     category: "equity",
     status: "coming-soon",
     tagline: "Tactical sector bets with hedged downside",
@@ -88,7 +88,7 @@ export const strategies: Strategy[] = [
   },
   {
     slug: "debt-long-short",
-    name: "HDFC SIF Debt Long Short Fund",
+    name: "XYZ SIF Debt Long Short Fund",
     category: "debt",
     status: "coming-soon",
     tagline: "Fixed income alpha through duration management",
@@ -138,8 +138,8 @@ export const faqs = [
     a: "SIFs enjoy the same tax treatment as mutual funds. Equity-oriented SIF strategies (with 65%+ equity allocation) are taxed as equity funds — 12.5% LTCG beyond ₹1.25 lakh and 20% STCG. Debt-oriented strategies follow debt fund taxation rules.",
   },
   {
-    q: "Who manages HDFC SIF strategies?",
-    a: "HDFC SIF strategies are managed by the same experienced fund management teams at HDFC AMC that oversee its mutual fund offerings. A dedicated Chief Investment Officer with 10+ years of fund management experience and ₹5,000+ crore AUM track record heads the SIF vertical.",
+    q: "Who manages XYZ SIF strategies?",
+    a: "XYZ SIF strategies are managed by the same experienced fund management teams at XYZ AMC that oversee its mutual fund offerings. A dedicated Chief Investment Officer with 10+ years of fund management experience and ₹5,000+ crore AUM track record heads the SIF vertical.",
   },
   {
     q: "What is the risk in SIF investments?",
